@@ -1,0 +1,17 @@
+<div class="row content">
+	<div class="col-xs-4">
+		<ul>
+			<?php
+				foreach($pages as $page)
+				{
+				?><li><a href="<?=$this->url('kitchen', ['action'=>'page', 'id'=>$page->id]);?>"><?=$page->page_name;?></a><?
+				}
+			?>
+		</ul>
+	</div>
+	<div class="col-xs-8">
+		<h3><?=$this->escapeHtml($data->page_name);?></h3>
+		<h4><?=$this->message;?></h4>
+		<?=$data->page_content;?>
+	</div>
+</div>
